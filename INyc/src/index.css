@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gloria-hallelujah-regular {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inputs
+{
+  height: 200px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+
+  }
+
+.input
+{
+  display: flex;
+  align-items: center;
+  padding: 2px; 
+  margin: 2px auto;
+}
+ 
+.inputs img
+{
+   padding: 5px;
+ 
+}
+.inputs input
+{
+  border-radius: 6px;
+  border: none;
+  font-family: 'Gloria Hallelujah', cursive;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  margin: auto;
+}
+.forgot-password{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: small;
+  color: white;
+}
+.forgot-password span
+{
+  color: gold;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: small;
+}
+
+.submit-container
+{
+  display: flex;
+  gap: 10px;
+  margin: 30px auto;
+}
+.submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: gold;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: small;
+  cursor: pointer;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .text-lg {
+    font-size: 1rem; /* Adjust font size for extra small devices */
+  }
+
+  .image-container {
+    width: 100%; /* Adjust width of image containers */
+  }
+
+  .button {
+    font-size: 0.875rem; /* Adjust button font size */
+    padding: 0.5rem 1rem; /* Adjust button padding */
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .text-lg {
+    font-size: 1.125rem; /* Adjust font size for small devices */
+  }
+
+  .image-container {
+    width: 50%; /* Adjust width of image containers */
+  }
+
+  .button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .text-lg {
+    font-size: 1.125rem; /* Adjust font size for medium devices */
+  }
+
+  .image-container {
+    width: 40%; /* Adjust width of image containers */
+  }
+
+  .button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .text-lg {
+    font-size: 1.25rem; /* Adjust font size for large devices */
+  }
+
+  .image-container {
+    width: 30%; /* Adjust width of image containers */
+  }
+
+  .button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .text-lg {
+    font-size: 1.5rem; /* Adjust font size for extra large devices */
+  }
+
+  .image-container {
+    width: 25%; /* Adjust width of image containers */
+  }
+
+  .button {
+    font-size: 1.125rem; /* Adjust button font size */
+    padding: 1rem 2rem; /* Adjust button padding */
+  }
+}
+
