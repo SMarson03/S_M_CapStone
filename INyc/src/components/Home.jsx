@@ -3,6 +3,7 @@ import backgroundImage from './DesignImages/Background.jpg';
 import video from './GalleryImages/HomeArt2.mp4';
 import video2 from './RestaurantImages/HomeRestaurants.mp4';
 import video3 from './EventImages/HomeEvent.mp4';
+import Navbar from './Navbar';
 
 
 function Home() {
@@ -93,8 +94,8 @@ function Home() {
           />
         </div>
       </div>
-    </div>
-  );
+          </div>
+    );
 }
 
 export default Home;

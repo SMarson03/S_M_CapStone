@@ -70,10 +70,16 @@
   width: 80px;
   height: 30px;
   border-radius: 6px;
+
   background-color: gold;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: small;
   cursor: pointer;
+}
+
+.gray{
+  background-color: rgb(98, 96, 96);
+  color: rgb(253, 243, 190);
 }
 
 

@@ -6,13 +6,15 @@ import secondaryBackgroundImage from './DesignImages/SignUpBackground.jpg';
 import user_icon from './IconImages/UserIcon.png';
 import mail_icon from './IconImages/MailIcon.png';
 import password_icon from './IconImages/PasswordIcon.png';
+import { useState } from 'react';
 
 
 
 
 function SignUp() {
   
-  
+  const [action, setAction] = useState('Sign Up');
+
   return (
 
     
@@ -32,7 +34,7 @@ function SignUp() {
           fontSize: '100px', 
           textAlign: 'center'
         }}>
-          JOIN INyc
+          {action}
         </div>
         <div style={{
           backgroundImage: `url(${secondaryBackgroundImage})`,
@@ -46,13 +48,13 @@ function SignUp() {
           alignItems: 'center'
         }}>
           <div className='inputs'>
-            <div className='input'>
+            {action==='Login'?<div></div>:<div className='input'>
             <img src={user_icon} style={{width: '20px',
             height: '20px'
             }}/>
             <input type='text' placeholder='Username'/>
-        </div>
-        <div className='input'>
+        </div>}
+            <div className='input'>
             <img src={mail_icon}
             style={{width: '20px',
               height: '20px'
@@ -66,10 +68,10 @@ function SignUp() {
               }}/>
             <input type='password' placeholder='Password'/>
         </div>
-        <div className='forgot-password'>Lost Password?<span>Click Here</span></div>
-        <div className='submit-container'>
-          <div className='submit'>Sign Up</div>
-            <div className='submit'>Log In</div>
+        {action=== 'Sign Up'?<div></div>:<div className='forgot-password'>Lost Password?<span>Click Here</span></div>}
+             <div className='submit-container'>
+          <div className={action==='Login'?'submit gray':'submit'}onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
+            <div className={action==='Sign Up'?'submit gray':'submit'}onClick={()=>{setAction("Login")}}>Login</div>
         </div>
       </div>
           
