@@ -16,9 +16,7 @@ function SignUp() {
   const [action, setAction] = useState('Sign Up');
 
   return (
-
-    
-    
+     
     <div style={{ 
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',

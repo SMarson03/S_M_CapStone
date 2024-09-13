@@ -5,9 +5,9 @@ import video2 from './RestaurantImages/HomeRestaurants.mp4';
 import video3 from './EventImages/HomeEvent.mp4';
 import Navbar from './Navbar';
 
-
 function Home() {
   return (
+      <>
     <div style={{ 
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
@@ -15,11 +15,13 @@ function Home() {
       height: '100vh',
       width: '100%'
     }}>
-      <div className='container mx-auto text-center'></div>
-      <div className="Home gloria-hallelujah-regular" style={{
-        fontSize: '100px', 
-        textAlign: 'center'
-      }}>
+        <Navbar/>
+        <div className='container mx-auto text-center'></div>
+        <div className="Home gloria-hallelujah-regular" style={{
+          fontSize: '100px', 
+          textAlign: 'center'
+        }}>
+       
       INyc
       </div>
       <p className='text-lg mx-auto text-center gloria-hallelujah-regular' style={{
@@ -94,7 +96,9 @@ function Home() {
           />
         </div>
       </div>
-          </div>
+    </div>
+          
+</>
     );
 }
 

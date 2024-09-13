@@ -5,6 +5,7 @@ import Event from './components/Event';
 import Restaurants from './components/Restaurants';
 import SignUp from './components/SignUp';
 import Arts from './components/Arts';
+import Navbar from './components/Navbar';
 
 function App() {
   
@@ -15,6 +16,8 @@ function App() {
     <Arts/>
     <Restaurants/>
     <Event/>
+    <Navbar/>
+    
      </>
 
   );

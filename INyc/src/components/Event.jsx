@@ -3,6 +3,7 @@ import backgroundImage from './DesignImages/Background.jpg';
 import image from './EventImages/BF.png';
 import image2 from './EventImages/nycwff2.jpg';
 import image3 from './EventImages/bkmuseumunion.jpg';
+import Navbar from './Navbar';
 
 function Event() {
   return (<div style={{ 
@@ -12,6 +13,7 @@ function Event() {
     height: '100vh',
     width: '100%'
   }}>
+    <Navbar/>
     <div className="Events" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
     Events
     </div>

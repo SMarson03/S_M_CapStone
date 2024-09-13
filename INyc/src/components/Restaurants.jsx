@@ -3,6 +3,7 @@ import backgroundImage from './DesignImages/Background.jpg';
 import image from './RestaurantImages/Cornbread.jpg';
 import image2 from './RestaurantImages/Tatian.png';
 import image3 from './RestaurantImages/Winson.jpg';
+import Navbar from './Navbar';
 
 function Restaurants() {
   return (<div style={{ 
@@ -12,6 +13,7 @@ function Restaurants() {
     height: '100vh',
     width: '100%'
   }}>
+    <Navbar/>
     <div className="Restaurant" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
     Restaurants
     </div>

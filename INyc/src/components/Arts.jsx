@@ -3,6 +3,7 @@ import backgroundImage from './DesignImages/Background.jpg';
 import image from './GalleryImages/Group.png';
 import image2 from './GalleryImages/Blue.png';
 import image3 from './GalleryImages/RobinKid.png';
+import Navbar from './Navbar';
 
 
 function Arts() {
@@ -13,6 +14,7 @@ function Arts() {
         height: '100vh',
         width: '100%'
       }}>
+        <Navbar/>
         <div className="Arts" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
         INArt
         </div>
