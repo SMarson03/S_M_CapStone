@@ -15,7 +15,7 @@ function Event() {
   }}>
     <Navbar/>
     <div className="Events" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
-    Events
+    INEvents
     </div>
     <div style={{
         display: 'flex',

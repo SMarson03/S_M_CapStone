@@ -79,7 +79,7 @@
 
 .gray{
   background-color: rgb(98, 96, 96);
-  color: rgb(253, 243, 190);
+  color: gold;
 }
 
 .navbar{
@@ -90,6 +90,7 @@
   min-height: 6px;
   background: gold;
   padding: 0  5px;
+  font-size: 18px;
 }
 
 .logo{
@@ -139,6 +140,13 @@ ul li{
   width: 20px;
   height: 20px;
   margin-top: 5px;
+}
+
+a {
+  color: black;
+}
+a:hover {
+   color: gray
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -15,7 +15,7 @@ function Restaurants() {
   }}>
     <Navbar/>
     <div className="Restaurant" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
-    Restaurants
+    INFood
     </div>
     <div style={{
         display: 'flex',
