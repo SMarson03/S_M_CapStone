@@ -149,11 +149,7 @@ a:hover {
    color: gray
 }
 
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
-}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
