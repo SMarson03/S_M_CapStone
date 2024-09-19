@@ -1,8 +1,5 @@
 import React from 'react'
 import backgroundImage from './DesignImages/Background.jpg';
-import image from './GalleryImages/Group.png';
-import image2 from './GalleryImages/Blue.png';
-import image3 from './GalleryImages/RobinKid.png';
 import Navbar from './Navbar';
 
 
@@ -25,7 +22,7 @@ function Arts() {
         height: '300px'
       }}>
         <div className="image-container" style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(http://localhost:8080/api/INyc/arts/1)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
@@ -36,7 +33,7 @@ function Arts() {
       }}>
       </div>
       <div className="image-container" style={{
-        backgroundImage: `url(${image2})`,
+        backgroundImage: `url(http://localhost:8080/api/INyc/arts/2)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
@@ -47,7 +44,7 @@ function Arts() {
 
       </div>
       <div className="image-container" style={{
-        backgroundImage: `url(${image3})`,
+        backgroundImage: `url(http://localhost:8080/api/INyc/arts/3)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',

@@ -19,13 +19,14 @@ public class Restaurants {
     private String top_Dish;
     private String reservation;
     private String price_Per_Person;
+    private String image_Url;
 
 
     public Restaurants() {
     }
 
     public Restaurants(Integer id, String name, String address, Location location, String cuisine,
-                       String top_Dish, String reservation, String price_Per_Person) {
+                       String top_Dish, String reservation, String price_Per_Person, String image_Url) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -34,5 +35,6 @@ public class Restaurants {
         this.top_Dish = top_Dish;
         this.reservation = reservation;
         this.price_Per_Person = price_Per_Person;
+        this.image_Url = image_Url;
     }
 }

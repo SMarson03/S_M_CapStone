@@ -32,14 +32,15 @@ public class BackEndController {
         return ResponseEntity.ok(homePageData);
     }
 
-    //Post an art events
+    // Post an art event
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/arts")
-    void CreateArts(@RequestBody Arts arts) {
+    void createArts(@RequestBody Arts arts) {
         artsRepository.save(arts);
     }
-//Get art event by id
-    @GetMapping("/{id}")
+
+    // Get art event by id
+    @GetMapping("/arts/{id}")
     Arts getArtsByID(@PathVariable Integer id) {
         Optional<Arts> arts = artsRepository.findById(id);
         if (arts.isEmpty()) {
@@ -47,22 +48,45 @@ public class BackEndController {
         }
         return arts.get();
     }
-    //Put an art event
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PutMapping("/{id}")
-    void updateArts(@RequestBody Arts arts, @PathVariable Integer id) {
-        artsRepository.save(arts);
 
+    // Get arts by location
+    @GetMapping("/arts/location/{location}")
+    public ResponseEntity<List<Arts>> getArtsByLocation(@PathVariable Location location) {
+        List<Arts> arts = (List<Arts>) artsRepository.findByLocation(location);
+        if (arts.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return ResponseEntity.ok(arts);
+    }
+    @GetMapping("/restaurants/{id}")
+    Restaurants getRestaurantsByID(@PathVariable Integer id) {
+        Optional<Restaurants> restaurants = restaurantsRepository.findById(id);
+        if (restaurants.isEmpty()) {
+            throw new RuntimeException();
+        }
+        return restaurants.get();
+    }
+
+    @GetMapping("/events/{id}")
+    Events getEventssByID(@PathVariable Integer id) {
+        Optional<Events> events = eventsRepository.findById(id);
+        if (events.isEmpty()) {
+            throw new RuntimeException();
+        }
+        return events.get();
+    }
+
+    // Put an art event
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/arts/{id}")
+    void updateArts(@RequestBody Arts arts, @PathVariable Integer id) {
         artsRepository.save(arts);
     }
 
-    //Delete an art event
+    // Delete an art event
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/arts/{id}")
     void deleteArts(@PathVariable Integer id) {
-        artsRepository.deleteById(id);
-
         artsRepository.deleteById(id);
     }
 }
-

@@ -126,7 +126,7 @@ ul li{
   border: 0;
   background: none;
   outline: 0;
-  color: #fff;
+  color: black;
   font-size: 18px;
   padding: 4px;
 }
@@ -147,6 +147,12 @@ a {
 }
 a:hover {
    color: gray
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */

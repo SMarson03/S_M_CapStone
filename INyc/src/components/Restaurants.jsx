@@ -1,8 +1,5 @@
 import React from 'react'
 import backgroundImage from './DesignImages/Background.jpg';
-import image from './RestaurantImages/Cornbread.jpg';
-import image2 from './RestaurantImages/Tatian.png';
-import image3 from './RestaurantImages/Winson.jpg';
 import Navbar from './Navbar';
 
 function Restaurants() {
@@ -24,7 +21,7 @@ function Restaurants() {
         height: '300px'
       }}>
     <div className="image-container" style={{
-        backgroundImage: `url(${image2})`,
+        backgroundImage: `url(http://localhost:8080/api/INyc/restaurants/1)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
@@ -35,7 +32,7 @@ function Restaurants() {
       }}>
       </div>
       <div className="image-container" style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(http://localhost:8080/api/INyc/restaurants/4)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
@@ -46,7 +43,7 @@ function Restaurants() {
 
       </div>
       <div className="image-container" style={{
-        backgroundImage: `url(${image3})`,
+        backgroundImage: `url(http://localhost:8080/api/INyc/restaurants/2)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',

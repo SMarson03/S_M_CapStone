@@ -21,20 +21,26 @@ public class DBCleanup {
         public static class DatabaseCleanup{
 
             private DataSource dataSource;
-            private final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseCleanup.class);
 
+            private final Logger logger = org.slf4j.LoggerFactory.getLogger(DatabaseCleanup.class);
             public DatabaseCleanup(DataSource dataSource){
+
                 this.dataSource = dataSource;
             }
+
             @PreDestroy
             public void dropDatabaseTable(){
                 //Implemenet this method to drop the table
                 try(
-                        Connection connection = dataSource.getConnection()){
+                    Connection connection = dataSource.getConnection()){
                     Statement statement = connection.createStatement();
                     statement.executeUpdate("DROP TABLE IF EXISTS restaurants");
                     statement.executeUpdate("DROP TABLE IF EXISTS arts");
                     statement.executeUpdate("DROP TABLE IF EXISTS events");
+                    statement.executeUpdate("DROP TABLE IF EXISTS users");
+
+                    logger.info("Table dropped successfully");
+
                 }catch(Exception e){e.printStackTrace();}
         }
     }
