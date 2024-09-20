@@ -1,5 +1,6 @@
-package com.INyc.backEnd.Common;
+package com.INyc.backEnd.Common.INFood;
 
+import com.INyc.backEnd.Common.Location;
 import jakarta.persistence.*;
 import lombok.*;
 

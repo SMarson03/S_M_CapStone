@@ -16,7 +16,7 @@ public class MyAppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String username;
+    private String name;
     private String password;
     private String email;
 
@@ -24,9 +24,9 @@ public class MyAppUser {
 public MyAppUser() {
 
 }
- public MyAppUser(Integer id, String username, String password, String email) {
+ public MyAppUser(Integer id, String name, String password, String email) {
         this.id = id;
-        this.username = username;
+        this.name = name;
         this.password = password;
         this.email = email;
     }

@@ -16,3 +16,4 @@ INSERT INTO Events(id, name, address, location, category, frst_Date, sec_Date, t
 (2, 'NYC Wine and Food Festival', '408 12th Ave.', 'MANHATTAN', 'Food', '2024-10-18','2024-10-19','2024-10-20', '200+', 'https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/nycwff2_dx42w8.jpg'),
 (3, 'Bushwick Film Festival', '620 Wilson Ave.', 'BROOKLYN', 'Entertainment', '2024-10-16','2024-10-19','2024-10-20', '60+', 'https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/BF_uwjmvx.png'),
 (4, 'Movie Night at Hudson Yard', '10th Ave. West 33rd Street', 'MANHATTAN', 'Entertainment', '2024-10-04','2024-10-11','2024-10-18', 'FREE', 'https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/Backyard-at-HY_1920x1200-with-logos-Movie-Nights_lzbadi.jpg');
+

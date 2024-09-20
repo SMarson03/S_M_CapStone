@@ -36,9 +36,4 @@ CREATE TABLE IF NOT EXISTS Events(
     image_URL VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS user(
-    id INT PRIMARY KEY,
-    username VARCHAR(255),
-    password VARCHAR(255),
-    email VARCHAR(255)
-  );
+

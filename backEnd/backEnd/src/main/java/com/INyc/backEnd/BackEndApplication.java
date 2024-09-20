@@ -1,10 +1,9 @@
 package com.INyc.backEnd;
 
-import com.INyc.backEnd.Common.Arts;
-import com.INyc.backEnd.Common.Events;
+import com.INyc.backEnd.INArt.Arts;
+import com.INyc.backEnd.INEvents.Events;
 import com.INyc.backEnd.Common.Location;
-import com.INyc.backEnd.Common.Restaurants;
-import com.INyc.backEnd.Model.MyAppUser;
+import com.INyc.backEnd.Common.INFood.Restaurants;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

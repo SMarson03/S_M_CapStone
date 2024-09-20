@@ -1,10 +1,30 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
+
 import backgroundImage from './DesignImages/Background.jpg';
 import Navbar from './Navbar';
 
 
 function Arts() {
-    return (<div style={{ 
+  
+  const [mydata, setMyData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData(){
+      try {
+        const response = await fetch('http://localhost:8080/INyc/arts');
+        const data = await response.json();
+        setMyData(data);
+      } catch (error) {
+        console.error(error);
+    }
+   }
+    fetchData();
+  }, []);
+ console.log(mydata);
+    return (
+    <>
+    
+      <div style={{ 
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -15,14 +35,25 @@ function Arts() {
         <div className="Arts" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
         INArt
         </div>
-        <div style={{
+       
+        {mydata.map((item, index) => {
+          return (
+            <>
+            <div key={index}>
+              {item.name}
+            </div>
+            </>
+          );
+         })}
+          
+
+        {/* <div style={{
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'flex-end',
         height: '300px'
       }}>
         <div className="image-container" style={{
-        backgroundImage: `url(http://localhost:8080/api/INyc/arts/1)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
@@ -33,7 +64,6 @@ function Arts() {
       }}>
       </div>
       <div className="image-container" style={{
-        backgroundImage: `url(http://localhost:8080/api/INyc/arts/2)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
@@ -44,7 +74,6 @@ function Arts() {
 
       </div>
       <div className="image-container" style={{
-        backgroundImage: `url(http://localhost:8080/api/INyc/arts/3)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
@@ -54,8 +83,12 @@ function Arts() {
       }}>
 
       </div>
+      </div> */}
+      
+      
       </div>
-      </div>
+      
+        </>
         
       );
   }

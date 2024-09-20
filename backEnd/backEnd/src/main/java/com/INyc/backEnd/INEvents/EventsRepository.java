@@ -1,5 +1,6 @@
-package com.INyc.backEnd.Common;
+package com.INyc.backEnd.INEvents;
 
+import com.INyc.backEnd.Common.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
