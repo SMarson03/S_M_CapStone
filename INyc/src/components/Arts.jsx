@@ -7,13 +7,14 @@ import Navbar from './Navbar';
 function Arts() {
   
   const [mydata, setMyData] = useState([]);
+  
 
   useEffect(() => {
     async function fetchData(){
       try {
-        const response = await fetch('http://localhost:8080/INyc/arts');
+        const response = await fetch('http://localhost:8081/INyc/arts');
         const data = await response.json();
-        setMyData(data);
+        setMyData(data.arts);
       } catch (error) {
         console.error(error);
     }
@@ -36,17 +37,28 @@ function Arts() {
         INArt
         </div>
        
+       <div className='container' style={{display: 'flex', 
+        flexDirection: 'row', justifyContent: 'space-between', 
+        alignItems: 'center'}}>
         {mydata.map((item, index) => {
           return (
             <>
-            <div key={index}>
-              {item.name}
+             
+             <div key={index} >
+             <img src={item.image_Url} alt="arts" style={{width: '100%', height: '100%'}}/>
+             <h1>{item.name}</h1>
+             <p>{item.address}</p>
+             <p>{item.location}</p>
+             <p>{item.artists}</p>
+             <p>{item.price_Per_Person}</p>
+                         
             </div>
+            
             </>
           );
-         })}
+         })} 
           
-
+         </div>
         {/* <div style={{
         display: 'flex',
         justifyContent: 'space-around',
