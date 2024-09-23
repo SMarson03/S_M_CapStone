@@ -18,7 +18,7 @@ public class WebCorsConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http)throws Exception{
         http.cors(Customizer.withDefaults()).csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/INyc/**").permitAll()
+                        .requestMatchers("/**").permitAll()
                         .anyRequest().authenticated());
         return http.build();
     }

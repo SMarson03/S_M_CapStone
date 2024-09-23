@@ -1,8 +1,28 @@
 import React from 'react'
 import backgroundImage from './DesignImages/Background.jpg';
 import Navbar from './Navbar';
+import { useEffect, useState } from 'react'
+
 
 function Restaurants() {
+  
+  const [mydata, setMyData] = useState([]);
+  
+
+  useEffect(() => {
+    async function fetchData(){
+      try {
+        const response = await fetch('http://localhost:8080/INyc/restaurants');
+        const data = await response.json();
+        setMyData(data);
+      } catch (error) {
+        console.error(error);
+    }
+   }
+    fetchData();
+  }, []);
+ console.log(mydata);
+
   return (<div style={{ 
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
@@ -14,45 +34,31 @@ function Restaurants() {
     <div className="Restaurant" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
     INFood
     </div>
-    <div style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'flex-end',
-        height: '300px'
-      }}>
-    <div className="image-container" style={{
-        backgroundImage: `url(http://localhost:8080/api/INyc/restaurants/1)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-          justifyContent: 'flex-end'
-       
-      }}>
-      </div>
-      <div className="image-container" style={{
-        backgroundImage: `url(http://localhost:8080/api/INyc/restaurants/4)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-          justifyContent: 'flex-end'
-      }}>
-
-      </div>
-      <div className="image-container" style={{
-        backgroundImage: `url(http://localhost:8080/api/INyc/restaurants/2)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-          justifyContent: 'flex-end'
-      }}>
-</div>
-      </div>
+    
+    <div className='container' style={{fontFamily:'Gloria Hallelujah', display: 'flex', 
+        flexDirection: 'row', justifyContent: 'space-around', 
+        alignItems: 'center'}}>
+        {mydata.map((item, index) => {
+          return (
+            <>
+             
+             <div key={index} >
+             <img src={item.image_Url} alt="restaurant" style={{ width: '200px', height: '190px', margin: 'auto', borderRadius: '8px' }} />
+              <h1 style={{ margin: '10px 0' }}>{item.name}</h1>
+              <p style={{ margin: '5px 0' }}>{item.address}</p>
+              <p style={{ margin: '5px 0' }}>{item.location}</p>
+              <p style={{ margin: '5px 0' }}>{item.cuisine}</p>
+              <p style={{ margin: '5px 0' }}>{item.reservation}</p>
+              <p style={{ margin: '5px 0' }}>{item.price_Per_Person}</p>
+             
+                         
+            </div>
+            
+            </>
+          );
+         })} 
+          
+         </div>
   </div>
     
   );

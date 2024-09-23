@@ -1,16 +1,17 @@
 package com.INyc.backEnd.Controller;
 
 import com.INyc.backEnd.Common.INFood.Restaurants;
-import com.INyc.backEnd.Common.INFood.RestaurantsPage;
 import com.INyc.backEnd.Common.INFood.RestaurantsRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
+@RequestMapping("/INyc")
+
 public class RestaurantController {
     private final RestaurantsRepository restaurantsRepository;
 
@@ -19,16 +20,20 @@ public class RestaurantController {
     }
 
     // Get all data for home page
-    @GetMapping("/INyc/restaurants")
-    public ResponseEntity<RestaurantsPage> restaurant() {
+    @GetMapping("/restaurants")
+    public List<Restaurants> getAllRestaurants() {
         List<Restaurants> restaurants = restaurantsRepository.findAll();
-        RestaurantsPage restaurantsPageData = new RestaurantsPage(restaurants);
+        return restaurants;
 
-        return ResponseEntity.ok(restaurantsPageData);
+//    public ResponseEntity<Restaurants> restaurant() {
+//        List<Restaurants> restaurants = restaurantsRepository.findAll();
+////        RestaurantsPage restaurantsPageData = new RestaurantsPage(restaurants);
+//
+//        return restaurants;
     }
 
     //Get by id
-    @GetMapping("/INyc/restaurants/{id}")
+    @GetMapping("/restaurants/{id}")
     Restaurants getRestaurantsByID(@PathVariable Integer id) {
         Optional<Restaurants> restaurants = restaurantsRepository.findById(id);
         if (restaurants.isEmpty()) {

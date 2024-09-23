@@ -1,17 +1,16 @@
 package com.INyc.backEnd.Controller;
 
-
 import com.INyc.backEnd.INEvents.Events;
-import com.INyc.backEnd.INEvents.EventsPage;
 import com.INyc.backEnd.INEvents.EventsRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
+@RequestMapping ("/INyc")
 public class EventController {
     private final EventsRepository eventsRepository;
 
@@ -19,14 +18,20 @@ public class EventController {
         this.eventsRepository = eventsRepository;
     }
 
-    @GetMapping("INyc/events")
-    public ResponseEntity<EventsPage> event() {
+    @GetMapping("/events")
+    public List<Events> getAllEvents() {
         List<Events> events = eventsRepository.findAll();
-        EventsPage eventsPageData = new EventsPage(events);
-
-        return ResponseEntity.ok(eventsPageData);
-
+        return events;
     }
+
+//    @GetMapping("INyc/events")
+//    public ResponseEntity<EventsPage> event() {
+//        List<Events> events = eventsRepository.findAll();
+//        EventsPage eventsPageData = new EventsPage(events);
+//
+//        return ResponseEntity.ok(eventsPageData);
+//
+//    }
 
     @GetMapping("INyc/events{id}")
     Events getEventsByID(@PathVariable Integer id) {

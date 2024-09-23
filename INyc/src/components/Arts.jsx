@@ -12,9 +12,9 @@ function Arts() {
   useEffect(() => {
     async function fetchData(){
       try {
-        const response = await fetch('http://localhost:8081/INyc/arts');
+        const response = await fetch('http://localhost:8080/INyc/arts');
         const data = await response.json();
-        setMyData(data.arts);
+        setMyData(data);
       } catch (error) {
         console.error(error);
     }
@@ -37,20 +37,21 @@ function Arts() {
         INArt
         </div>
        
-       <div className='container' style={{display: 'flex', 
-        flexDirection: 'row', justifyContent: 'space-between', 
+        <div className='container' style={{fontFamily:'Gloria Hallelujah', display: 'flex', 
+        flexDirection: 'row', justifyContent: 'space-around', 
         alignItems: 'center'}}>
         {mydata.map((item, index) => {
           return (
             <>
              
              <div key={index} >
-             <img src={item.image_Url} alt="arts" style={{width: '100%', height: '100%'}}/>
-             <h1>{item.name}</h1>
-             <p>{item.address}</p>
-             <p>{item.location}</p>
-             <p>{item.artists}</p>
-             <p>{item.price_Per_Person}</p>
+             <img src={item.image_Url} alt="restaurant" style={{ width: '200px', height: '190px', margin: 'auto', borderRadius: '8px' }} />
+              <h1 style={{ margin: '10px 0' }}>{item.name}</h1>
+              <p>{item.artists}</p>
+              <p style={{ margin: '5px 0' }}>{item.address}</p>
+              <p style={{ margin: '5px 0' }}>{item.location}</p>
+              <p style={{ margin: '5px 0' }}>{item.price_Per_Person}</p>
+             
                          
             </div>
             
@@ -58,47 +59,8 @@ function Arts() {
           );
          })} 
           
-         </div>
-        {/* <div style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'flex-end',
-        height: '300px'
-      }}>
-        <div className="image-container" style={{
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-          justifyContent: 'flex-end'
-       
-      }}>
-      </div>
-      <div className="image-container" style={{
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-          justifyContent: 'flex-end'
-      }}>
-
-      </div>
-      <div className="image-container" style={{
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-          justifyContent: 'flex-end'
-      }}>
-
-      </div>
-      </div> */}
-      
-      
-      </div>
+         </div>   
+        </div>
       
         </>
         

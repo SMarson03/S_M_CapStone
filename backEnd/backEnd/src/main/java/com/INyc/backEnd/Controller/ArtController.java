@@ -1,11 +1,8 @@
 package com.INyc.backEnd.Controller;
 
-import com.INyc.backEnd.Common.Location;
 import com.INyc.backEnd.INArt.Arts;
-import com.INyc.backEnd.INArt.ArtsPage;
 import com.INyc.backEnd.INArt.ArtsRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +10,7 @@ import java.util.Optional;
 
 @CrossOrigin
 @RestController
+@RequestMapping ("/INyc")
 public class ArtController {
     private final ArtsRepository artsRepository;
 
@@ -20,15 +18,20 @@ public class ArtController {
                this.artsRepository = artsRepository;
     }
 
-    @GetMapping("INyc/arts")
-    public ResponseEntity<ArtsPage> art() {
+    @GetMapping("/arts")
+    public List<Arts> getAllArts() {
         List<Arts> arts = artsRepository.findAll();
-        ArtsPage artsPageData = new ArtsPage(arts);
-
-        return ResponseEntity.ok(artsPageData);
+        return arts;
     }
+//    @GetMapping("/arts")
+//    public ResponseEntity<ArtsPage> art() {
+//        List<Arts> arts = artsRepository.findAll();
+//        ArtsPage artsPageData = new ArtsPage(arts);
+//
+//        return ResponseEntity.ok(artsPageData);
+//    }
 
-    @GetMapping("INyc/arts/{id}")
+    @GetMapping("/arts/{id}")
     Arts getArtsByID(@PathVariable Integer id) {
         Optional<Arts> arts = artsRepository.findById(id);
         if (arts.isEmpty()) {
