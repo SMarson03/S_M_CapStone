@@ -27,26 +27,40 @@ function Event() {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
+    height: '100%',
     width: '100%'
   }}>
     <Navbar/>
     <div className="Events" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
     INEvents
     </div>
-    <div className='container' style={{fontFamily:'Gloria Hallelujah', display: 'flex', 
-        flexDirection: 'row', justifyContent: 'space-around', 
-        alignItems: 'center'}}>
+    <div className='container-events ' style={{fontFamily:'Gloria Hallelujah',
+      display: 'flex', 
+      flexDirection: 'row', 
+      justifyContent: 'space-around', 
+      margin: 'auto', 
+      alignItems: 'flex-start', 
+      flexWrap: 'wrap' 
+    }}>
         {mydata.map((item, index) => {
           return (
             <>
              
              <div key={index} >
-             <img src={item.image_Url} alt="restaurant" style={{ width: '200px', height: '190px', margin: 'auto', borderRadius: '8px' }} />
-              <h1 style={{ margin: '10px 0' }}>{item.name}</h1>
-              <p style={{ margin: '5px 0' }}>{item.address}</p>
-              <p style={{ margin: '5px 0' }}>{item.location}</p>
-              <p style={{ margin: '5px 0' }}>{item.price_Per_Person}</p>
+             <img src={item.image_Url} style={{ display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              margin: '20px', 
+              padding: '10px', 
+              border: '1px solid #ccc', 
+              borderRadius: '8px', 
+              width: '400px',
+              height: '340px'
+              }} />
+              <h3 style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.name}</h3>
+              <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.address}</p>
+              <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.location}</p>
+              <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
              
                          
             </div>

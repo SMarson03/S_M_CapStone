@@ -32,15 +32,16 @@ public class BackEndApplication {
 			Arts arts2 = new Arts(2, "Carter Burden Gallery", "548 W 28th St #534", Location.Manhattan, "Blue Journey", "Ellen Wallenstein",Date.valueOf("2024-08-01" ),Date.valueOf("2024-11-06") ,"FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1727122044/EWallenstein_jzomte.jpg");
 			Arts arts3 = new Arts(3, "Templon Gallery", "293 Tenth Ave.", Location.Manhattan, "Searching For America", "Robin Kid", Date.valueOf("2024-09-04"),Date.valueOf("2024-10-26"), "FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/RobinKid_oavr7u.png");
 			Arts arts4 = new Arts(4, "Petzel Gallery", "540 West 25th Street", Location.Manhattan, "Supporting Actor", "Pieter Schoolwerth", Date.valueOf("2024-09-05"),Date.valueOf("2024-10-26"),"FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/Peter_pg7blf.png");
+			Arts arts5 = new Arts(5, "James Cohan Gallery", "48 Walker Street", Location.Manhattan, "The Mythic Age", "Nauldine Pierre", Date.valueOf("2024-09-12"), Date.valueOf("2024-10-19"), "FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/JarrettEarnest_eyzv9v.png");
 
-			List<Arts> arts = List.of(arts1, arts2, arts3, arts4);
+			List<Arts> arts = List.of(arts1, arts2, arts3, arts4, arts5);
 
 
-				Restaurants restaurants1 = new Restaurants(1, "Tatianas", "10 Lincoln Center Plaza", Location.Manhattan, "Afro Caribbean", "Mom Dukes Shrimp", "YES", "$100+","https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/Tatian_m7kc5k.png");
-				Restaurants restaurants2 = new Restaurants(2, "Win Son", "159 Graham Ave.", Location.Brooklyn, "Taiwanese", "Chicken Sandwich", "NO", "$50+", "https://res.cloudinary.com/djsguemrp/image/upload/t_INyc template/v1726505102/Winson_apsqfl.jpg");
-				Restaurants restaurants3 = new Restaurants(3, "Roccos", "115-10 Rockaway Blvd", Location.Queens, "Italian", "Grilled Octopus", "NO", "$50+", "https://res.cloudinary.com/djsguemrp/image/upload/t_INyc template/v1726516187/Rocco_ajaguw.png");
-				Restaurants restaurants4 = new Restaurants(4, "Cornbread", "409 Eastern Parkway", Location.Brooklyn, "Soul Food", "Cornbread", "NO", "25+", "https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/Cornbread_n9abdg.jpg");
-				Restaurants restaurants5 = new Restaurants(5, "Hudson", "37 Bruckner Blvd", Location.Bronx, "BBQ", "Brisket", "NO", "$25+", "https://res.cloudinary.com/djsguemrp/image/upload/v1726516197/Hudson_lozblu.jpg");
+				Restaurants restaurants1 = new Restaurants(1, "Tatianas", "10 Lincoln Center Plaza", Location.Manhattan, "Afro Caribbean", "Goat Patties, Mom Dukes Shrimp", "YES", "$100+","https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/Tatian_m7kc5k.png");
+				Restaurants restaurants2 = new Restaurants(2, "Win Son", "159 Graham Ave.", Location.Brooklyn, "Taiwanese", "Marinated Cucumbers, Chicken Sandwich", "NO", "$50+", "https://res.cloudinary.com/djsguemrp/image/upload/t_INyc template/v1726505102/Winson_apsqfl.jpg");
+				Restaurants restaurants3 = new Restaurants(3, "Roccos", "115-10 Rockaway Blvd", Location.Queens, "Italian", "Veal Parmesan Chop, Grilled Octopus", "NO", "$50+", "https://res.cloudinary.com/djsguemrp/image/upload/t_INyc template/v1726516187/Rocco_ajaguw.png");
+				Restaurants restaurants4 = new Restaurants(4, "Cornbread", "409 Eastern Parkway", Location.Brooklyn, "Soul Food", "Fried Chicken Dinner, Cornbread", "NO", "25+", "https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/Cornbread_n9abdg.jpg");
+				Restaurants restaurants5 = new Restaurants(5, "Hudson", "37 Bruckner Blvd", Location.Bronx, "BBQ", "The Brisket", "NO", "$25+", "https://res.cloudinary.com/djsguemrp/image/upload/v1726516197/Hudson_lozblu.jpg");
 
 				List<Restaurants> restaurants = List.of(restaurants1, restaurants2, restaurants3, restaurants4, restaurants5);
 
@@ -49,8 +50,9 @@ public class BackEndApplication {
 			Events events2 = new Events(2, "NYC Wine and Food Festival", "408 12th Ave.", Location.Manhattan, "Food", Date.valueOf("2024-10-18"), Date.valueOf("2024-10-19"), Date.valueOf("2024-10-20"), "$200+", "https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/nycwff2_dx42w8.jpg");
 			Events events3 = new Events(3, "Bushwick Film Festival", "620 Wilson Ave.", Location.Brooklyn, "Entertainment", Date.valueOf("2024-10-16"), Date.valueOf("2024-10-19"), Date.valueOf("2024-10-20"), "$60+", "https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/BF_uwjmvx.png");
 			Events events4 = new Events(4, "Movie Night at Hudson Yard", "10th Ave. West 33rd Street", Location.Manhattan, "Entertainment", Date.valueOf("2024-10-04"), Date.valueOf("2024-10-11"), Date.valueOf("2024-10-18"), "FREE", "https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/Backyard-at-HY_1920x1200-with-logos-Movie-Nights_lzbadi.jpg");
+			Events events5 = new Events(5, "Pumpkin Night at The Bronx Zoo", "2300 Southern Blvd", Location.Bronx, "Entertainment", Date.valueOf("2024-09-26"), Date.valueOf("2024-10-15"), Date.valueOf("2024-10-27"), "$30+", "https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/BronxZoo_pumpkin_night_2019_1920x1080");
 
-			List<Events> events = List.of(events1, events2, events3, events4);
+			List<Events> events = List.of(events1, events2, events3, events4, events5);
 		};
 
 //@Bean

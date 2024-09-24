@@ -25,12 +25,12 @@ function Home() {
       INyc
       </div>
       <p className='text-lg mx-auto text-center gloria-hallelujah-regular' style={{
+        display: 'flex', justifyContent:'center', margin: 'auto',
         whiteSpace: 'normal',
         wordWrap: 'break-word'
       }}>
-        Welcome to INyc, a platform that shares up-and-coming restaurants and
-        various cultural events around the city. Search places, spaces, and activities
-        by borough, price, or category. Now that you're INyc, let's get you around.
+        Welcome to INyc, sharing a monthly round up of some IN restaurants, events, and artists to catch 
+        around the city. Now that you're INyc, let's get you around.
       </p>
       <div style={{
         display: 'flex',
