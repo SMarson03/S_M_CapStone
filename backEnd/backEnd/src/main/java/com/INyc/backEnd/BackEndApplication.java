@@ -28,7 +28,7 @@ public class BackEndApplication {
 	@Bean
 	CommandLineRunner runner() {
 		return args -> {
-			Arts arts1 = new Arts(1, "Gagosian Gallery", "555 West 24th Street", Location.Manhattan, "Icons From A Half Century", "Group", Date.valueOf("2024-05-14"), Date.valueOf("2024-11-30"), "FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/Group_f1c5xd.png");
+			Arts arts1 = new Arts(1, "Gagosian Gallery", "555 West 24th Street", Location.Manhattan, "Icons From A Half Century", "Group Show", Date.valueOf("2024-05-14"), Date.valueOf("2024-11-30"), "FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/Group_f1c5xd.png");
 			Arts arts2 = new Arts(2, "Carter Burden Gallery", "548 W 28th St #534", Location.Manhattan, "Blue Journey", "Ellen Wallenstein",Date.valueOf("2024-08-01" ),Date.valueOf("2024-11-06") ,"FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1727122044/EWallenstein_jzomte.jpg");
 			Arts arts3 = new Arts(3, "Templon Gallery", "293 Tenth Ave.", Location.Manhattan, "Searching For America", "Robin Kid", Date.valueOf("2024-09-04"),Date.valueOf("2024-10-26"), "FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1726505101/RobinKid_oavr7u.png");
 			Arts arts4 = new Arts(4, "Petzel Gallery", "540 West 25th Street", Location.Manhattan, "Supporting Actor", "Pieter Schoolwerth", Date.valueOf("2024-09-05"),Date.valueOf("2024-10-26"),"FREE","https://res.cloudinary.com/djsguemrp/image/upload/v1726505102/Peter_pg7blf.png");

@@ -7,7 +7,7 @@ function Routes() {
     <>
     <R>
         
-        <Route path='/' element={<SignUp/>}/>
+        <Route path='/login' element={<SignUp/>}/>
         <Route path='/home' element={<Home/>}/>
         <Route path='/arts' element={<Arts/>}/>
         <Route path='/restaurants' element={<Restaurants/>}/>

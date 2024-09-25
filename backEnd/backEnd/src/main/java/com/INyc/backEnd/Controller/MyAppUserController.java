@@ -1,15 +1,16 @@
 package com.INyc.backEnd.Controller;
 
-import com.INyc.backEnd.Common.*;
-import com.INyc.backEnd.Model.MyAppUser;
+import com.INyc.backEnd.Users.MyAppUser;
+import com.INyc.backEnd.Users.UserRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
-@RequestMapping("/api/INyc/SignUp")
+@CrossOrigin
 @RestController
+@RequestMapping("/INyc")
 public class MyAppUserController {
     private final UserRepository userRepository;
 
@@ -17,16 +18,25 @@ public class MyAppUserController {
         this.userRepository = userRepository;
     }
 
-    @GetMapping
-    public ResponseEntity<SignUp> signUp() {
+    @GetMapping("/Login")
+    public List<MyAppUser> getAllUsers() {
         List<MyAppUser> myAppUsers = userRepository.findAll();
-        SignUp signUpData = new SignUp(myAppUsers);
-        return ResponseEntity.ok(signUpData);
+        return myAppUsers;
     }
+
+    @GetMapping("/Login/{id}")
+    MyAppUser getUsersByID(@PathVariable Integer id) {
+        Optional<MyAppUser> myAppUser = userRepository.findById(id);
+        if (myAppUser.isEmpty()) {
+            throw new RuntimeException();
+        }
+        return myAppUser.get();
+    }
+
 
     // Post a new account
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
+    @PostMapping("/SignUp")
     void createUsers(@RequestBody MyAppUser myAppUser) {
         userRepository.save(myAppUser);
     }

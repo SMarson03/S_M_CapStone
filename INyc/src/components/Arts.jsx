@@ -62,6 +62,7 @@ function Arts() {
               }} />
               <h3 style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.name}</h3>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.artists}</p>
+              <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.exhibits}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.address}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.location}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
