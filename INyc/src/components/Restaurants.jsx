@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import { useEffect, useState } from 'react'
 
 
+
 function Restaurants() {
   
   const [mydata, setMyData] = useState([]);
@@ -65,11 +66,13 @@ function Restaurants() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.top_Dish}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.reservation}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
-             
-                         
+              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', borderRadius: '8px', border: 'none'}}>
+                <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
+                  IN</a></button>       
             </div>
-            
+                              
             </>
+            
           );
          })} 
           

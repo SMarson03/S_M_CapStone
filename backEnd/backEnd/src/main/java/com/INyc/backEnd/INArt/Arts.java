@@ -25,12 +25,13 @@ public class Arts {
     private Date end_Date;
     private String price_Per_Person;
     private String image_Url;
+    private String url;
 
     public Arts() {
     }
 
     public Arts(Integer id, String name, String address, Location location, String exhibits, String artists,
-                Date begin_Date, Date end_Date, String price_Per_Person, String image_Url) {
+                Date begin_Date, Date end_Date, String price_Per_Person, String image_Url, String url) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -41,6 +42,7 @@ public class Arts {
         this.end_Date = end_Date;
         this.price_Per_Person = price_Per_Person;
         this.image_Url = image_Url;
+        this.url = url;
     }
 
 }

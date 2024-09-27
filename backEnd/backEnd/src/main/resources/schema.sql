@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS Arts(
     begin_Date Date,
     end_Date Date,
     price_Per_Person VARCHAR(50),
-    image_URL VARCHAR(255)
+    image_URL VARCHAR(255),
+    url VARCHAR(255)
     );
 
 CREATE TABLE IF NOT EXISTS Restaurants(
@@ -20,7 +21,8 @@ CREATE TABLE IF NOT EXISTS Restaurants(
     top_Dish VARCHAR(50),
     reservation VARCHAR(50),
     price_Per_Person VARCHAR(50),
-    image_URL VARCHAR(255)
+    image_URL VARCHAR(255),
+    url VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Events(
@@ -33,7 +35,8 @@ CREATE TABLE IF NOT EXISTS Events(
     sec_Date Date,
     thrd_date Date,
     price_Per_Person VARCHAR(50),
-    image_URL VARCHAR(255)
+    image_URL VARCHAR(255),
+    url VARCHAR(255)
 );
 
 

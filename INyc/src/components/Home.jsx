@@ -31,9 +31,9 @@ function Home() {
         margin: '0 auto' 
       }}>
         Welcome to INyc, sharing a bi-monthly round up of some IN restaurants, events, and artists to catch around the city. 
-        Featured is our favorite art party at the Brooklyn museum, First Saturdays, one of the most coveted party by all culture 
-        mavens that claim to be "outside". Pumpkin Night a fun family event where visitors peruse through unique jack-o-lanterns 
-        on display. Even though its fall outdoor movies are still a thing at Hudson Yard. 
+        Featured is our favorite at the Brooklyn museum, First Saturdays, one of the most coveted parties by all culture 
+        mavens that claim to be "outside". Pumpkin Nights a fun multi-night family event where visitors peruse through unique jack-o-lanterns 
+        on display. Even though its fall outdoor movies are still a thing and a must at Hudson Yard. 
         Now that you're INyc, let's get you around.
       </p>
       <div style={{
@@ -47,26 +47,11 @@ function Home() {
           width: '30%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'flex-end'
-        }}>
-          <video
-            src={video}
-            controls
-            autoPlay
-            muted
-            loop
-            style={{
-              width: '100%',
-              height: 'auto'
-            }}
-          />
-        </div>
-        <div className="video-container" style={{
-          height: '100%',
-          width: '30%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end'
+          justifyContent: 'flex-end',
+          border: '1px solid #ccc', 
+          borderRadius: '8px', 
+          flex:  1,
+          margin: '0 10px'
         }}>
           <video
             src={video2}
@@ -76,7 +61,7 @@ function Home() {
             loop
             style={{
               width: '100%',
-              height: 'auto'
+              height: '300px'
             }}
           />
         </div>
@@ -85,7 +70,34 @@ function Home() {
           width: '30%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'flex-end'
+          justifyContent: 'flex-end',
+          border: '1px solid #ccc', 
+          borderRadius: '8px', 
+          flex:  1,
+          margin: '0 10px'
+        }}>
+          <video
+            src={video}
+            controls
+            autoPlay
+            muted
+            loop
+            style={{
+              width: '100%',
+              height: '400px'
+            }}
+          />
+        </div>
+        <div className="video-container" style={{
+          height: '100%',
+          width: '30%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-end',
+          border: '1px solid #ccc', 
+          borderRadius: '8px', 
+          flex:  1,
+          margin: '0 10px'
         }}>
           <video
             src={video3}
@@ -95,7 +107,7 @@ function Home() {
             loop
             style={{
               width: '100%',
-              height: 'auto'
+              height: '400px'
             }}
           />
         </div>

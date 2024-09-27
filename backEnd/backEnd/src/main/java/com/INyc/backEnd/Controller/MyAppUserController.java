@@ -3,6 +3,7 @@ package com.INyc.backEnd.Controller;
 import com.INyc.backEnd.Users.MyAppUser;
 import com.INyc.backEnd.Users.UserRepository;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,14 +25,22 @@ public class MyAppUserController {
         return myAppUsers;
     }
 
-    @GetMapping("/Login/{id}")
-    MyAppUser getUsersByID(@PathVariable Integer id) {
-        Optional<MyAppUser> myAppUser = userRepository.findById(id);
-        if (myAppUser.isEmpty()) {
-            throw new RuntimeException();
-        }
-        return myAppUser.get();
+    @GetMapping("/Login/{email}")
+    public List<MyAppUser> getUsersByEmail(@PathVariable String email) {
+        Optional<MyAppUser> myAppUser = userRepository.findByEmail(email).stream().findAny();
+//        if (myAppUser.isEmpty()) {
+//            throw new RuntimeException();
+//        }
+        return (myAppUser.isEmpty()) ? null : List.of(myAppUser.get());
     }
+//    @GetMapping("/Login/{email}")
+//    public ResponseEntity<String> getUsersByEmail(@PathVariable String email) {
+//        Optional<MyAppUser> myAppUser = userRepository.findByEmail(email).stream().findFirst();
+//        if (myAppUser.isEmpty()) {
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+//        }
+//        return ResponseEntity.ok(myAppUser.get().getEmail());
+//    }
 
 
     // Post a new account

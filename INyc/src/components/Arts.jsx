@@ -66,7 +66,9 @@ function Arts() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.address}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.location}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
-             
+              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', borderRadius: '8px', border: 'none'}}>
+                <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
+                  IN</a></button> 
                          
             </div>
             

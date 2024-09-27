@@ -23,12 +23,13 @@ public class Events {
     private Date thrd_Date;
     private String price_Per_Person;
     private String image_Url;
+    private String url;
 
     public Events(){
     }
 
     public Events(Integer id, String name, String address, Location location, String category,
-                  Date frst_Date, Date sec_Date, Date thrd_Date, String price_Per_Person, String image_Url) {
+                  Date frst_Date, Date sec_Date, Date thrd_Date, String price_Per_Person, String image_Url, String url) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -39,6 +40,7 @@ public class Events {
         this.thrd_Date = thrd_Date;
         this.price_Per_Person = price_Per_Person;
         this.image_Url = image_Url;
+        this.url = url;
     }
 
 }
