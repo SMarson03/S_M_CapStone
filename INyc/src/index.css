@@ -118,7 +118,7 @@ ul li{
 .search-box{
   display: flex;
   justify-content: center;
-  background: gray;
+  background: white;
   padding: 5px 20px;
   border-radius: 10px;
 }
@@ -134,7 +134,7 @@ ul li{
 
 .search-box input::placeholder{
   font-family: 'Gloria Hallelujah', cursive;
-  color: gold;
+  color: black;
 }
 
 .search-box img{
@@ -150,7 +150,33 @@ a:hover {
    color: gray
 }
 
+.footer {
+  padding: 10px; /* Adds some padding inside the footer */
+  text-align: center; /* Centers the text inside the footer */
+  background-color: #f8f8f8; /* Optional: Adds a background color to the footer */
+}
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: gold;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* Adjust the width as needed */
+  margin-top: 10px; /* Adds some space above the logos */
+}
+
+.footer-logos img {
+  width: 60px;
+  height: 10px;
+}
 
 
 /* Extra small devices (phones, 600px and down) */

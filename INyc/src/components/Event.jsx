@@ -3,6 +3,7 @@ import backgroundImage from './DesignImages/Background.jpg';
 import { useEffect, useState } from 'react'
 
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Event() {
 
@@ -62,9 +63,11 @@ function Event() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.location}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.category}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
-              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', borderRadius: '8px', border: 'none'}}>
+              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', 
+                borderRadius: '8px', border: 'none', marginBottom: '100px'}}>
                 <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
-                  IN</a></button> 
+                  INyc</a></button> 
+                         
                          
             </div>
             
@@ -74,6 +77,7 @@ function Event() {
          })} 
           
          </div>   
+         <Footer/>
         </div>
       
             

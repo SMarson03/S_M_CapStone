@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import backgroundImage from './DesignImages/Background.jpg';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 function Arts() {
@@ -30,7 +31,7 @@ function Arts() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100%',
-        width: '100%'
+        width: 'wv'
       }}>
         <Navbar/>
         <div className="Arts" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
@@ -66,9 +67,10 @@ function Arts() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.address}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.location}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
-              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', borderRadius: '8px', border: 'none'}}>
+              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', 
+                borderRadius: '8px', border: 'none', marginBottom: '100px'}}>
                 <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
-                  IN</a></button> 
+                  INyc</a></button> 
                          
             </div>
             
@@ -78,7 +80,7 @@ function Arts() {
           
          </div>   
         </div>
-      
+        <Footer/>
         </>
         
       );
