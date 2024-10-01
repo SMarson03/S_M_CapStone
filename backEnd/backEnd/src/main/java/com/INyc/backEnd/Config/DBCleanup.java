@@ -38,6 +38,7 @@ public class DBCleanup {
                     statement.executeUpdate("DROP TABLE IF EXISTS arts");
                     statement.executeUpdate("DROP TABLE IF EXISTS events");
                     statement.executeUpdate("DROP TABLE IF EXISTS users");
+                    statement.executeUpdate("DROP TABLE IF user_role");
 
                     logger.info("Table dropped successfully");
 

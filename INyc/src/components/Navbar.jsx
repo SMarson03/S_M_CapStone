@@ -1,9 +1,15 @@
 import React from 'react';
 import logo_icon from './DesignImages/Icon1.png';
-import search_icon from './DesignImages/search.png';
+import SearchBar from './SearchBar';
+import SearchResultList from './SearchResultList';
+import { useState } from 'react';
+
 
 function Navbar() {
-  return (
+  
+  const [results, setResults] = useState([]);
+
+    return (
     <>
 <div className='navbar'>
   <img src={logo_icon} alt='' className='logo'/>
@@ -14,11 +20,17 @@ function Navbar() {
     <li><a href='/Event'>INEvents</a></li>
   </ul>
 
-  <div className='search-box'>
+
+ 
+
+  {/* <div className='search-box'>
     <input type='text' placeholder='Search...'/>
     <img src={search_icon} alt=''/>
-  </div>
-  
+  </div> */}
+    <div className="search-bar-container">
+        <SearchBar setResults={setResults} />
+        {results && results.length > 0 && <SearchResultList results={results} />}
+      </div>
     
     </div>
    </>

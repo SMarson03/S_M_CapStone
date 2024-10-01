@@ -1,14 +1,13 @@
 package com.INyc.backEnd.Users;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 
 
 @Data
-@Table(name = "user")
+@Table(name = "users")
 @Entity
-public class MyAppUser {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -17,10 +16,10 @@ public class MyAppUser {
     private String email;
 
 
-public MyAppUser() {
+    public User() {
 
-}
- public MyAppUser(Integer id, String name, String password, String email) {
+    }
+    public User(Integer id, String name, String password, String email) {
         this.id = id;
         this.name = name;
         this.password = password;

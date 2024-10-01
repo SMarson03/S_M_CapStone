@@ -115,7 +115,7 @@ ul li{
   cursor: pointer;
 }
 
-.search-box{
+/* .search-box{
   display: flex;
   justify-content: center;
   background: white;
@@ -135,6 +135,15 @@ ul li{
 .search-box input::placeholder{
   font-family: 'Gloria Hallelujah', cursive;
   color: black;
+} */
+.search-bar-container {
+  padding-top: 20vh;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
 }
 
 .search-box img{
@@ -151,10 +160,31 @@ a:hover {
 }
 
 .footer {
-  padding: 10px; /* Adds some padding inside the footer */
-  text-align: center; /* Centers the text inside the footer */
-  background-color: #f8f8f8; /* Optional: Adds a background color to the footer */
+
+  height: 100px; /* Adjust the height as needed */
+  background-color: #f8f8f8; /* Optional: Add a background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-top: 5px solid gold; /* Adds a single line border to the top of the footer */
 }
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between logos as needed */
+}
+
+.footer-logos img {
+  width: 60px;
+  height: 25px;
+}
+
 
 .footer-content {
   display: flex;

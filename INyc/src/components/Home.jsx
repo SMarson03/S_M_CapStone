@@ -4,9 +4,11 @@ import video from './GalleryImages/HomeArt2.mp4';
 import video2 from './RestaurantImages/HomeRestaurants.mp4';
 import video3 from './EventImages/HomeEvent.mp4';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Home() {
   return (
+      
       <>
     <div style={{ 
       backgroundImage: `url(${backgroundImage})`,
@@ -115,8 +117,8 @@ function Home() {
       </div>
       
     </div>
-  
-          
+    <Footer/>
+     
 </>
 
     );

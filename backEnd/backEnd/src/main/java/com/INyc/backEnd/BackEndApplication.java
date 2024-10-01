@@ -62,9 +62,9 @@ public class BackEndApplication {
 //@Bean
 //CommandLineRunner runner() {
 //	return args -> {
-//		MyAppUser user1 = new MyAppUser(1, "", "", "");
+//		User user1 = new User(1, "", "", "");
 //
-//		List<MyAppUser> myAppUsers = List.of(user1);
+//		List<User> myAppUsers = List.of(user1);
 //	};
 		}
 		}

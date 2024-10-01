@@ -1,20 +1,14 @@
 
-import './App.css'
-import {Routes} from './components'
+import './App.css';
+import {Routes} from './components';
 
 function App() {
-  
-  return(<>
-  
-   <Routes/>
- 
-    
-     </>
 
+  return (
+    <>   
+      <Routes />
+    </>
   );
-
-
-  
 }
 
-  export default App
+export default App

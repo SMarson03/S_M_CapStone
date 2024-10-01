@@ -4,7 +4,7 @@ import secondaryBackgroundImage from './DesignImages/SignUpBackground.jpg';
 import mail_icon from './IconImages/MailIcon.png';
 import password_icon from './IconImages/PasswordIcon.png';
 
-function Login({ handleLogin }) {
+function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -19,13 +19,38 @@ function Login({ handleLogin }) {
     return true;
   };
 
+  const handleLogin = (user) => {
+    // Logic to handle user login (e.g., save user info to state or context)
+    console.log('User logged in:', user);
+  };
+
+  const login = async () => {
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        // other options like headers and body
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      handleLogin(data.user); // This should now work
+      navigate('/home'); // Redirect to home page on successful login
+    } catch (err) {
+      console.log(err);
+      setError('An error occurred. Please try again.');
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     try {
-      const response = await fetch('http://localhost:8080/INyc/Login/email', { // Adjust this endpoint as necessary
-        method: 'GET', // Use POST or GET as per your backend requirements
+      const response = await fetch(`http://localhost:8080/INyc/Login/${email}`, { // Adjust this endpoint as necessary
+        method: 'POST',  // Use POST or GET as per your backend requirements
         headers: {
           'Content-Type': 'application/json',
         },
