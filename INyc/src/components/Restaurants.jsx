@@ -3,6 +3,9 @@ import backgroundImage from './DesignImages/Background.jpg';
 import Navbar from './Navbar';
 import { useEffect, useState } from 'react'
 import Footer from './Footer';
+import food_icon from './DesignImages/cooking.png';
+
+
 
 
 
@@ -33,7 +36,8 @@ function Restaurants() {
     width: '100%'
   }}>
     <Navbar/>
-    <div className="Restaurant" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', textAlign: 'center'}}>
+    <div className="Restaurant" style={{fontFamily: 'Gloria Hallelujah', fontSize: '100px', 
+      textAlign: 'center'}}>
     INFood
     </div>
     
@@ -67,10 +71,10 @@ function Restaurants() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.top_Dish}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.reservation}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
-              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', 
+              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '2px', backgroundColor: 'goldenrod', color: 'white', 
                 borderRadius: '8px', border: 'none', marginBottom: '100px'}}>
                 <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
-                  INyc</a></button>      
+                  <img src={food_icon}style={{height: '40px', width:'40px', display: 'flex', justifyContent:'center', margin: 'auto'}}/></a></button>      
             </div>
                               
             </>

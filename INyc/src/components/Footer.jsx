@@ -1,4 +1,5 @@
 import React from 'react'
+import backgroundImage from './DesignImages/Background.jpg';
 import image1 from './DesignImages/Accenture.svg.png';
 import image2 from './DesignImages/Per-Scholas-Secondary-Logo-Dark.png';
 
@@ -6,6 +7,15 @@ function Footer() {
   return (
    <>
     <div>
+    <div style={{ 
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      height: '400px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
       <footer className="footer">
         
            <div className="footer-content">
@@ -19,7 +29,7 @@ function Footer() {
        
     </footer>
     </div>
-
+</div>
     </>
   )
 }

@@ -1,36 +1,33 @@
 import React from 'react';
-import logo_icon from './DesignImages/Icon1.png';
-import SearchBar from './SearchBar';
-import SearchResultList from './SearchResultList';
-import { useState } from 'react';
+import logo_icon from './DesignImages/logo2.png';
+import Search from './Search';
+import art_icon from './DesignImages/mona-lisa.png';
+import food_icon from './DesignImages/cooking.png';
+import event_icon from './DesignImages/event.png';
+import home_icon from './DesignImages/statue.png'
 
 
 function Navbar() {
   
-  const [results, setResults] = useState([]);
+
 
     return (
     <>
-<div className='navbar'>
-  <img src={logo_icon} alt='' className='logo'/>
-  <ul>
-    <li ><a href='/Home'>INyc</a></li>
-    <li><a href='/Arts'>INArt</a></li>
-    <li><a href='/Restaurants'>INFood</a></li>
-    <li><a href='/Event'>INEvents</a></li>
-  </ul>
+<div className='navbar'style={{display:'flex'}}>
+  <img src={logo_icon} alt='' style={{height:'75px'}}/>
+  <ul style={{display:'flex', gap:'80px'}}>
 
+    <li ><a href='/Home'><img src={home_icon}style={{height: '60px', width:'60px'}}/></a></li>
+    <li><a href='/Arts'><img src={art_icon}style={{height: '60px', width:'60px'}}/></a>t</li>
+    <li><a href='/Restaurants'><img src={food_icon}style={{height: '60px', width:'60px'}}/></a></li>
+    <li><a href='/Event'><img src={event_icon}style={{height: '60px', width:'60px'}}/></a></li>
+  </ul>
+  
+
+
+<Search />
 
  
-
-  {/* <div className='search-box'>
-    <input type='text' placeholder='Search...'/>
-    <img src={search_icon} alt=''/>
-  </div> */}
-    <div className="search-bar-container">
-        <SearchBar setResults={setResults} />
-        {results && results.length > 0 && <SearchResultList results={results} />}
-      </div>
     
     </div>
    </>

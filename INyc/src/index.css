@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+Line 14: Gloria Hallelujah font.
+Line 20-52: Login form.
+
+
+
+
+
+*/
 .gloria-hallelujah-regular {
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 400;
@@ -41,6 +50,7 @@
   padding: 2px;
   margin: auto;
 }
+
 .forgot-password{
   display: flex;
   justify-content: center;
@@ -50,6 +60,7 @@
   font-size: small;
   color: white;
 }
+
 .forgot-password span
 {
   color: gold;
@@ -83,14 +94,14 @@
 }
 
 .navbar{
-  width: 100%;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
   min-height: 6px;
-  background: gold;
-  padding: 0  5px;
+  background: goldenrod;
+  padding: 0  20px;
   font-size: 18px;
 }
 
@@ -100,22 +111,20 @@
   cursor: pointer;
 }
 
-ul{
-flex: 1;
-list-style: none;
-text-align: center;
-}
 
-ul li{
-
+li{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-family: 'Gloria Hallelujah', cursive;
   display: inline-block;
-  margin: 10px 20px;
+  margin: 5px 10px;
   line-height: 18px;
   cursor: pointer;
 }
 
-/* .search-box{
+
+.search-box{
   display: flex;
   justify-content: center;
   background: white;
@@ -135,7 +144,8 @@ ul li{
 .search-box input::placeholder{
   font-family: 'Gloria Hallelujah', cursive;
   color: black;
-} */
+} 
+
 .search-bar-container {
   padding-top: 20vh;
   width: 40%;
@@ -150,7 +160,7 @@ ul li{
   width: 20px;
   height: 20px;
   margin-top: 5px;
-}
+} 
 
 a {
   color: black;
@@ -160,54 +170,24 @@ a:hover {
 }
 
 .footer {
-
-  height: 100px; /* Adjust the height as needed */
-  background-color: #f8f8f8; /* Optional: Add a background color */
+  width: 100%;
+  height: 6px;
+  background: goldenrod;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-top: 5px solid gold; /* Adds a single line border to the top of the footer */
-}
-
-.footer-content {
-  text-align: center;
-}
-
-.footer-logos {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Adjust the gap between logos as needed */
-}
-
-.footer-logos img {
-  width: 60px;
-  height: 25px;
-}
-
+  padding: 6px;
+  font-family: 'Gloria Hallelujah', cursive;}
 
 .footer-content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: gold;
-  height: 4px;
+  height: 1px;
+  padding-top: 22px;
   border-radius: 10px;
 }
-
-.footer-logos {
-  display: flex;
-  justify-content: space-between;
-  width: 200px; /* Adjust the width as needed */
-  margin-top: 10px; /* Adds some space above the logos */
-}
-
-.footer-logos img {
-  width: 60px;
-  height: 10px;
-}
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -216,96 +196,95 @@ a:hover {
   }
 
   .text-lg {
-    font-size: 1rem; /* Adjust font size for extra small devices */
+    font-size: 1rem; /* Font size for extra small devices */
   }
 
   .image-container {
-    width: 100%; /* Adjust width of image containers */
+    width: 100%; /* Full width for image containers */
   }
 
   .button {
-    font-size: 0.875rem; /* Adjust button font size */
-    padding: 0.5rem 1rem; /* Adjust button padding */
+    font-size: 0.875rem; /* Smaller button font size */
+    padding: 0.5rem 1rem; /* Adjusted button padding */
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) and (max-width: 767px) {
   .container {
     max-width: 720px;
   }
 
   .text-lg {
-    font-size: 1.125rem; /* Adjust font size for small devices */
+    font-size: 1.125rem; /* Font size for small devices */
   }
 
   .image-container {
-    width: 50%; /* Adjust width of image containers */
+    width: 50%; /* Half width for image containers */
   }
 
   .button {
-    font-size: 1rem; /* Adjust button font size */
-    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    font-size: 1rem; /* Button font size */
+    padding: 0.75rem 1.5rem; /* Button padding */
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .container {
-    max-width: 720px;
+    max-width: 720px; /* Same max width as small devices */
   }
 
   .text-lg {
-    font-size: 1.125rem; /* Adjust font size for medium devices */
+    font-size: 1.125rem; /* Font size for medium devices */
   }
 
   .image-container {
-    width: 40%; /* Adjust width of image containers */
+    width: 40%; /* Width for image containers */
   }
 
   .button {
-    font-size: 1rem; /* Adjust button font size */
-    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    font-size: 1rem; /* Button font size */
+    padding: 0.75rem 1.5rem; /* Button padding */
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .container {
     max-width: 960px;
   }
 
   .text-lg {
-    font-size: 1.25rem; /* Adjust font size for large devices */
+    font-size: 1.25rem; /* Font size for large devices */
   }
 
   .image-container {
-    width: 30%; /* Adjust width of image containers */
+    width: 30%; /* Width for image containers */
   }
 
   .button {
-    font-size: 1rem; /* Adjust button font size */
-    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    font-size: 1rem; /* Button font size */
+    padding: 0.75rem 1.5rem; /* Button padding */
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1201px and up) */
+@media only screen and (min-width: 1201px) {
   .container {
     max-width: 1140px;
   }
 
   .text-lg {
-    font-size: 1.5rem; /* Adjust font size for extra large devices */
+    font-size: 1.5rem; /* Font size for extra large devices */
   }
 
   .image-container {
-    width: 25%; /* Adjust width of image containers */
+    width: 25%; /* Width for image containers */
   }
 
   .button {
-    font-size: 1.125rem; /* Adjust button font size */
-    padding: 1rem 2rem; /* Adjust button padding */
+    font-size: 1.125rem; /* Larger button font size */
+    padding: 1rem 2rem; /* Increased button padding */
   }
 }
-

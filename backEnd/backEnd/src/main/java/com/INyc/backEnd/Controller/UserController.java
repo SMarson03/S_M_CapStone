@@ -39,7 +39,7 @@ public class UserController {
     }
 
 
-   // Post a new account
+    // Post a new account
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/SignUp")
     void createUsers(@RequestBody User user) {

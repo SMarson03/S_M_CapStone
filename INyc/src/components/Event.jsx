@@ -1,9 +1,10 @@
 import React from 'react';
 import backgroundImage from './DesignImages/Background.jpg';
 import { useEffect, useState } from 'react'
-
 import Navbar from './Navbar';
+import event_icon from './DesignImages/event.png';
 import Footer from './Footer';
+
 
 function Event() {
 
@@ -63,10 +64,10 @@ function Event() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.location}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.category}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
-              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', 
+              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '2px', backgroundColor: 'goldenrod', color: 'white', 
                 borderRadius: '8px', border: 'none', marginBottom: '100px'}}>
                 <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
-                  INyc</a></button> 
+                  <img src={event_icon}style={{height: '40px', width:'40px', display: 'flex', justifyContent:'center', margin: 'auto'}}/></a></button> 
                          
                          
             </div>

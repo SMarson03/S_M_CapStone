@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
-
 import backgroundImage from './DesignImages/Background.jpg';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import arts_icon from './DesignImages/mona-lisa.png';
+
+
 
 
 function Arts() {
@@ -67,10 +69,10 @@ function Arts() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.address}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.location}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
-              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '10px', backgroundColor: 'gold', color: 'white', 
+              <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '2px', backgroundColor: 'goldenrod', color: 'white', 
                 borderRadius: '8px', border: 'none', marginBottom: '100px'}}>
                 <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
-                  INyc</a></button> 
+                  <img src={arts_icon}style={{height: '40px', width:'40px', display: 'flex', justifyContent:'center', margin: 'auto'}}/></a></button> 
                          
             </div>
             

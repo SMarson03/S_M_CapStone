@@ -6,4 +6,3 @@ export {default as Restaurants} from './Restaurants';
 export {default as Event} from './Event';
 export {default as Routes} from './Routes';
 export {default as Navbar} from './Navbar';
-export {default as SearchBar} from './SearchBar';

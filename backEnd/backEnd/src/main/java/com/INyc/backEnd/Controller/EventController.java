@@ -33,7 +33,7 @@ public class EventController {
 //
 //    }
 
-    @GetMapping("INyc/events{id}")
+    @GetMapping("/events{id}")
     Events getEventsByID(@PathVariable Integer id) {
         Optional<Events> events = eventsRepository.findById(id);
         if (events.isEmpty()) {

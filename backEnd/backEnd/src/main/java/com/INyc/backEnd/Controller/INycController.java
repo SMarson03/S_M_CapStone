@@ -31,11 +31,12 @@ public class INycController {
 
     // Get all data for home page
     @GetMapping("")
-        public ResponseEntity<HomePage> home() {
+        public ResponseEntity<HomePage> all() {
             List<Arts> arts = artsRepository.findAll();
             List<Restaurants> restaurants = restaurantsRepository.findAll();
             List<Events> events = eventsRepository.findAll();
             HomePage homePageData = new HomePage(arts, restaurants, events);
             return ResponseEntity.ok(homePageData);
         }
-    }
+
+        }
