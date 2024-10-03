@@ -4,6 +4,8 @@ import secondaryBackgroundImage from './DesignImages/SignUpBackground.jpg';
 import mail_icon from './IconImages/MailIcon.png';
 import password_icon from './IconImages/PasswordIcon.png';
 
+
+
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -74,6 +76,8 @@ function Login() {
   };
 
   return (
+
+    <>
     <div style={{ 
       backgroundImage: `url(${secondaryBackgroundImage})`,
       backgroundSize: 'cover',
@@ -104,8 +108,10 @@ function Login() {
             <Link to='/SignUp'style={{color: 'white'}}>Don't have an account? Sign Up</Link>
           </div>
         </form>
+        </div>
       </div>
-    </div>
+     
+        </>
   );
 }
 

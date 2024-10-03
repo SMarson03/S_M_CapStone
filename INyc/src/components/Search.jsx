@@ -59,7 +59,7 @@ function Search() {
     };
 
     return (
-        <div className='search-box'>
+        <div className='search-box' style={{border: '2px solid black'}}>
             <input
                 type='text'
                 placeholder='Search...'

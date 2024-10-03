@@ -28,7 +28,9 @@ function Restaurants() {
   }, []);
  console.log(mydata);
 
-  return (<div style={{ 
+  return (
+  <>
+  <div style={{ 
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -40,6 +42,18 @@ function Restaurants() {
       textAlign: 'center'}}>
     INFood
     </div>
+    <p className='text-lg mx-auto text-center gloria-hallelujah-regular' style={{
+        whiteSpace: 'normal',
+        wordWrap: 'break-word',
+        maxWidth: '800px', 
+        margin: '0 auto', 
+        marginTop: '2%',
+      }}>
+          Hole in the wall takeout and michellin starred restaurants are culinary treasures alike. 
+          INyc is the cornerstone of diverse flavors and innovative dishes crafted by the worlds most 
+          talented chefs. Explore some hidden gems and beloved classics that satisfy every craving 
+          and palate. For up to date menus and reservations, click the yellow icon.
+      </p>
     
     <div className='container-events ' style={{fontFamily:'Gloria Hallelujah',
       display: 'flex', 
@@ -49,6 +63,12 @@ function Restaurants() {
       alignItems: 'flex-start', 
       flexWrap: 'wrap' 
     }}>
+      <div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)', // Create 3 equal columns
+  gap: '20px', // Add space between grid items
+  padding: '20px'
+}}>
         {mydata.map((item, index) => {
           return (
             <>
@@ -59,7 +79,7 @@ function Restaurants() {
               alignItems: 'center', 
               margin: '20px', 
               padding: '10px', 
-              border: '1px solid #ccc', 
+              border: '4px solid black', 
               borderRadius: '8px', 
               width: '400px',
               height: '340px'
@@ -72,7 +92,7 @@ function Restaurants() {
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.reservation}</p>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.price_Per_Person}</p>
               <button style={{display: 'flex', justifyContent:'center', margin: 'auto', padding: '2px', backgroundColor: 'goldenrod', color: 'white', 
-                borderRadius: '8px', border: 'none', marginBottom: '100px'}}>
+                borderRadius: '8px', border: 'none', marginBottom: '100px', border: '2px solid black'}}>
                 <a href={item.url} target="_blank" style={{fontFamily:'Gloria Hallelujah'}}>
                   <img src={food_icon}style={{height: '40px', width:'40px', display: 'flex', justifyContent:'center', margin: 'auto'}}/></a></button>      
             </div>
@@ -83,9 +103,10 @@ function Restaurants() {
          })} 
           
          </div>
-         <Footer/>
+           </div>
   </div>
-    
+  <Footer/>
+    </>
   );
 }
 

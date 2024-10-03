@@ -37,6 +37,8 @@ function Home() {
         must-visit spots around town. Join us as we explore the rich cultural tapestry 
         that makes our city so special! For information on menus, reservations, and dates,
         click the yellow link at the bottom of the event.
+        <br/>
+        <br/>
         Now that you're INyc, let's get you around.
       </p>
       <div style={{
@@ -53,9 +55,9 @@ function Home() {
           height: '100%',
           width: '30%',
           display: 'flex',
-          
           justifyContent: 'flex-end',
-          border: '1px solid #ccc', 
+          marginBottom: '12%', 
+          border: '4px solid black', 
           borderRadius: '8px', 
           flex:  1          
         }}>
@@ -76,7 +78,8 @@ function Home() {
           width: '30%',
           display: 'flex',
           justifyContent: 'flex-end',
-          border: '1px solid #ccc', 
+          marginBottom: '12%', 
+          border: '4px solid black',
           borderRadius: '8px', 
           flex:  1,
           
@@ -98,7 +101,8 @@ function Home() {
           width: '30%',
           display: 'flex',
           justifyContent: 'flex-end',
-          border: '1px solid #ccc', 
+          marginBottom: '12%', 
+          border: '4px solid black',
           borderRadius: '8px', 
           flex:  1         
         }}>

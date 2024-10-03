@@ -14,7 +14,7 @@ function Routes() {
         <Route path='/Arts' element={<Arts/>}/>
         <Route path='/Restaurants' element={<Restaurants/>}/>
         <Route path='/Event' element={<Event/>}/>
-        <Route path='/SearchResults/:id' element={<SearchResults/>}/>
+        <Route path='/SearchResults/:id' element={<SearchResults />}/>
         
     </R>
     </> 

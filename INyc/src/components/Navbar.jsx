@@ -1,5 +1,5 @@
 import React from 'react';
-import logo_icon from './DesignImages/logo2.png';
+import logo_icon from './DesignImages/WhiteINyc.png';
 import Search from './Search';
 import art_icon from './DesignImages/mona-lisa.png';
 import food_icon from './DesignImages/cooking.png';
@@ -13,8 +13,10 @@ function Navbar() {
 
     return (
     <>
-<div className='navbar'style={{display:'flex'}}>
-  <img src={logo_icon} alt='' style={{height:'75px'}}/>
+<div className='navbar'style={{display:'flex',
+  border: '4px solid black', 
+}}>
+  <img src={logo_icon} alt='' style={{height:'125px'}}/>
   <ul style={{display:'flex', gap:'80px'}}>
 
     <li ><a href='/Home'><img src={home_icon}style={{height: '60px', width:'60px'}}/></a></li>

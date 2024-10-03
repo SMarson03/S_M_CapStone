@@ -4,7 +4,6 @@ package com.INyc.backEnd.Controller;
 import com.INyc.backEnd.Users.User;
 import com.INyc.backEnd.Users.UserRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
