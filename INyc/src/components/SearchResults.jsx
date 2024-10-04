@@ -12,3 +12,5 @@ function SearchResults({ result }){
 };
 
 export default SearchResults;
+
+///My search and search results are still in progress but we are almost there.

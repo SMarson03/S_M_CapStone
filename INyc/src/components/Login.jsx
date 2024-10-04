@@ -67,7 +67,7 @@ function Login() {
 
       const data = await response.json();
       // Handle the successful login, e.g., save user info, call handleLogin, etc.
-      handleLogin(data.user); // Assuming the API returns user data
+      handleLogin(data.user); 
       navigate('/home'); // Redirect to home page on successful login
     } catch (err) {
       console.log(err);

@@ -4,12 +4,12 @@
 
 /* 
 Line 14: Gloria Hallelujah font.
-Line 20-52: Login form.
+Line 20-100: SignUp/Login form.
+Line 102-184: Navbar/Search bar.
+Line 186-207: Footer.
 
-
-
-
-
+Since my tailwinds wasn't working properly I had to use the CSS style page quite often.
+So I tried my best to keep it as clean and organized as possible by noting where everything is by line.
 */
 .gloria-hallelujah-regular {
   font-family: "Gloria Hallelujah", cursive;
@@ -40,6 +40,7 @@ Line 20-52: Login form.
    padding: 5px;
  
 }
+
 .inputs input
 {
   border-radius: 6px;
@@ -74,6 +75,7 @@ Line 20-52: Login form.
   gap: 10px;
   margin: 30px auto;
 }
+
 .submit{
   display: flex;
   justify-content: center;
@@ -82,7 +84,7 @@ Line 20-52: Login form.
   height: 30px;
   border-radius: 6px;
 
-  background-color: gold;
+  background-color: goldenrod;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: small;
   cursor: pointer;
@@ -90,7 +92,11 @@ Line 20-52: Login form.
 
 .gray{
   background-color: rgb(98, 96, 96);
-  color: gold;
+  color: goldenrod;
+}
+
+.icon-white {
+  filter: invert(100%);
 }
 
 .navbar{
@@ -176,10 +182,6 @@ a {
 }
 a:hover {
    color: gray
-}
-
-.icon-white {
-  filter: invert(100%);
 }
 
 .footer {

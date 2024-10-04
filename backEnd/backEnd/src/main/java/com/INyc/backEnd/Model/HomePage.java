@@ -20,3 +20,6 @@ public class HomePage {
         this.events = events;
     }
 }
+
+//I was going to use this page to display the homepage of the website. It would display the top 3 arts, restaurants, and events.
+//But I went a different route in terms of display.

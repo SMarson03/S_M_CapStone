@@ -14,9 +14,9 @@ function Search() {
             setLoading(true);
             try {
                 const responses = await Promise.all([
-                    fetch('http://localhost:8080/INyc/restaurants'), // Replace with your first API endpoint
-                    fetch('http://localhost:8080/INyc/arts'), // Replace with your second API endpoint
-                    fetch('http://localhost:8080/INyc/events')  // Add more as needed
+                    fetch('http://localhost:8080/INyc/restaurants'), 
+                    fetch('http://localhost:8080/INyc/arts'), 
+                    fetch('http://localhost:8080/INyc/events')  
                 ]);
 
                 const dataPromises = responses.map(response => {
@@ -46,7 +46,7 @@ function Search() {
 
     const handleItemClick = (item) => {
         const currentPath = location.pathname;
-        const newPath = `/SearchResults/${item.id}`; // Adjust as needed based on your item structure
+        const newPath = `/SearchResults/${item.id}`; 
 
         if (currentPath === newPath) {
             navigate(newPath, { replace: true });
@@ -87,3 +87,5 @@ function Search() {
 }
 
 export default Search;
+
+///My search and search results are still in progress but we are almost there.
