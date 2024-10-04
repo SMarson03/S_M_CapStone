@@ -78,7 +78,7 @@ function Arts() {
               border: '4px solid black', 
               borderRadius: '8px', 
               width: '400px',
-              height: '340px'
+              height: '320px'
               }} />
               <h3 style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.name}</h3>
               <p style={{display: 'flex', justifyContent:'center', margin: 'auto'}}>{item.artists}</p>
@@ -107,3 +107,4 @@ function Arts() {
   }
 
 export default Arts
+

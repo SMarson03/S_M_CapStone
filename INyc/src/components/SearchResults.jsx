@@ -6,7 +6,7 @@ function SearchResults({ result }){
       className="search-result"
       onClick={(e) => alert(`You selected ${result}!`)}
     >
-      {result}
+      {/* {result} */}
     </div>
   );
 };

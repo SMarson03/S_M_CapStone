@@ -24,15 +24,6 @@ public class EventController {
         return events;
     }
 
-//    @GetMapping("INyc/events")
-//    public ResponseEntity<EventsPage> event() {
-//        List<Events> events = eventsRepository.findAll();
-//        EventsPage eventsPageData = new EventsPage(events);
-//
-//        return ResponseEntity.ok(eventsPageData);
-//
-//    }
-
     @GetMapping("/events{id}")
     Events getEventsByID(@PathVariable Integer id) {
         Optional<Events> events = eventsRepository.findById(id);

@@ -105,6 +105,11 @@ Line 20-52: Login form.
   font-size: 18px;
 }
 
+.navbar ul li:hover{
+  transform: scale(1.1); /* Slightly increase the size */
+  transition: transform 0.1s ease; /* Smooth transition */
+}
+
 .logo{
   width: 100px;
   height: 50px;
@@ -123,6 +128,10 @@ li{
   cursor: pointer;
 }
 
+button :hover{
+  transform: scale(1.1); /* Slightly increase the size */
+  transition: transform 0.1s ease; /* Smooth transition */
+}
 
 .search-box{
   display: flex;
@@ -167,6 +176,10 @@ a {
 }
 a:hover {
    color: gray
+}
+
+.icon-white {
+  filter: invert(100%);
 }
 
 .footer {

@@ -23,13 +23,6 @@ public class ArtController {
         List<Arts> arts = artsRepository.findAll();
         return arts;
     }
-//    @GetMapping("/arts")
-//    public ResponseEntity<ArtsPage> art() {
-//        List<Arts> arts = artsRepository.findAll();
-//        ArtsPage artsPageData = new ArtsPage(arts);
-//
-//        return ResponseEntity.ok(artsPageData);
-//    }
 
     @GetMapping("/arts/{id}")
     Arts getArtsByID(@PathVariable Integer id) {
@@ -40,15 +33,7 @@ public class ArtController {
         return arts.get();
     }
 
-//    @GetMapping("INyc/arts/{location}")
-//    public ResponseEntity<List<Arts>> findByLocation(@PathVariable String location) {
-//        List<Arts> arts = artsRepository.findByLocation(String.valueOf(location));
-//        if (arts.isEmpty()) {
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-//        }
-//        return ResponseEntity.ok(arts);
-//    }
-    //Put an art event
+
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/arts/{id}")
     void updateArts(@RequestBody Arts arts, @PathVariable Integer id) {

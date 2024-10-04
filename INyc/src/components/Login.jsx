@@ -91,18 +91,18 @@ function Login() {
         <h1 className="LoginHeader" style={{ fontSize: '100px', textAlign: 'center', color: 'gold',
           fontFamily: 'Gloria Hallelujah', marginBottom: '20px'
          }}>Log In</h1>
-        <form className='inputs' onSubmit={handleSubmit}>
+        <form className='inputs' style={{margin: 'auto'}} onSubmit={handleSubmit}>
           {error && <p className='text-red-500'>{error}</p>}
           <div className='input'>
-            <img src={mail_icon} style={{ width: '20px', height: '20px' }} alt="Mail Icon" />
+            <img src={mail_icon} className="icon-white" style={{ width: '20px', height: '20px' }} alt="Mail Icon" />
             <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
           <div className='input'>
-            <img src={password_icon} style={{ width: '20px', height: '20px' }} alt="Password Icon" />
+            <img src={password_icon} className="icon-white" style={{ width: '20px', height: '20px' }} alt="Password Icon" />
             <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
           <div className='submit-container'>
-            <button type='submit' className='submit'>Log In</button>
+            <button type='submit' className='submit' style={{ width: '70px', height: '40px' }}>Log In</button>
           </div>
           <div className='submit-container'>
             <Link to='/SignUp'style={{color: 'white'}}>Don't have an account? Sign Up</Link>

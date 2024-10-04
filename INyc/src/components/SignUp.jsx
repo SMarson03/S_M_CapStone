@@ -60,27 +60,27 @@ function SignUp() {
     }}>
       <div className='form-container'>
         <h1 className="SignUpHeader" style={{ fontSize: '100px', textAlign: 'center', color: 'gold',
-          fontFamily: 'Gloria Hallelujah', marginBottom: '20px'
+          fontFamily: 'Gloria Hallelujah',marginBottom: '20px'
          }}>Sign Up</h1>
-        <form className='inputs' onSubmit={submitData}>
+        <form className='inputs' style={{margin: 'auto'}} onSubmit={submitData}>
           {error && <p className='text-red-500'>{error}</p>}
           <div className='input'>
-            <img src={user_icon} style={{ width: '20px', height: '20px' }} alt="User Icon" />
-            <input type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} required />
-          </div>
-          <div className='input'>
-            <img src={mail_icon} style={{ width: '20px', height: '20px' }} alt="Mail Icon" />
-            <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </div>
-          <div className='input'>
-            <img src={password_icon} style={{ width: '20px', height: '20px' }} alt="Password Icon" />
-            <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <img src={user_icon} className="icon-white" style={{ width: '20px', height: '20px' }} alt="User Icon" />
+          <input type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} required />
+        </div>
+        <div className='input'>
+          <img src={mail_icon} className="icon-white" style={{ width: '20px', height: '20px' }} alt="Mail Icon" />
+          <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+        </div>
+        <div className='input'>
+          <img src={password_icon} className="icon-white" style={{ width: '20px', height: '20px' }} alt="Password Icon" />
+          <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} required />
+        </div>
+          <div className='submit-container'>
+            <button type='submit' className='submit' style={{ width: '70px', height: '40px' }} >Sign Up</button>
           </div>
           <div className='submit-container'>
-            <button type='submit' className='submit'>Sign Up</button>
-          </div>
-          <div className='submit-container'>
-            <Link to='/LogIn' style={{color: 'white'}}>Already have an account? Log In</Link>
+            <Link to='/LogIn' style={{color: 'white'}}><span>Already have an account? Log In</span></Link>
           </div>
         </form>
       </div>

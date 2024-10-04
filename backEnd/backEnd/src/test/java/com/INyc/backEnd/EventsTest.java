@@ -3,7 +3,6 @@ package com.INyc.backEnd;
 import com.INyc.backEnd.Common.Location;
 import com.INyc.backEnd.INEvents.Events;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Date;
 
