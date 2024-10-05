@@ -105,7 +105,7 @@ function Login() {
             <button type='submit' className='submit' style={{ width: '70px', height: '40px' }}>Log In</button>
           </div>
           <div className='submit-container'>
-            <Link to='/SignUp'style={{color: 'white'}}>Don't have an account? Sign Up</Link>
+            <Link to='/'style={{color: 'white'}}>Don't have an account? Sign Up</Link>
           </div>
         </form>
         </div>
